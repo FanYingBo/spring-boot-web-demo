@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<body>
+     <div tiles:include="side">
+         <!--/*@thymesVar id="message" type="com.study.selfs.gupao.mvc.controller.IndexController"*/-->
+         <p th:text="${#strings.isEmpty(message)}">Messages!</p>
+<!--
+         <p th:text="${!string.isNotBlank(message) ? '' : message}">Messages!</p>
+-->
+         <table>
+             <thead>
+                <tr>
+                    <th></th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr th:each="">
+
+                </tr>
+             </tbody>
+         </table>
+     </div>
+</body>
+</html>

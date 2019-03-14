@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<body>
+<div tiles:include="side">
+    <table>
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>sex</th>
+            <th>job</th>
+            <th>createdate</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="custom : ${customs}">
+                <td data-th-text="${custom.name}"></td>
+                <td data-th-text="${custom.age}"></td>
+                <td data-th-text="${custom.sex}"></td>
+                <td data-th-text="${custom.job}"></td>
+                <td data-th-text="${custom.createDate}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
